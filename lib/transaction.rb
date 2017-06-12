@@ -1,11 +1,13 @@
-require "./lib/account"
+require 'date'
 
 class Transaction
 
-  attr_reader :amount
+  attr_reader :amount, :type, :date
 
-  def initialize(amount)
+  def initialize(amount, type, date)
+    @type = type
     @amount = amount
+    @date = date
   end
 
 end
