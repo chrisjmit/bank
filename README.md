@@ -20,7 +20,7 @@ date || credit || debit || balance
 ```
 
 #### User stories
-
+```
 As a customer,
 So I can manage my finances,
 I'd like to make a deposit to my bank account.
@@ -36,3 +36,4 @@ I'd like to see my balance.
 As a customer,
 So I have proof of my transactions,
 I'd like to print these listed by latest date.
+```
