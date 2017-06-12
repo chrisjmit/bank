@@ -1,7 +1,11 @@
+require "./lib/account"
+
 class Transaction
 
-  def deposit(account, amount)
-    account.balance += amount
+  attr_reader :amount
+
+  def initialize(amount)
+    @amount = amount
   end
 
 end
