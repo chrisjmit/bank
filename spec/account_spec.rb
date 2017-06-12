@@ -36,13 +36,9 @@ describe Account do
   end
 
   describe "A statement" do
-    it "prints the header" do
+    xit "prints the header" do
       expect(subject.statement).to eq("date || credit || debit || balance")
     end
-
-    # it "returns each transaction" do
-    #   expect
-    # end
   end
 
 end

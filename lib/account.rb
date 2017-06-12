@@ -24,9 +24,9 @@ class Account
   end
 
   def statement
-    return "date || credit || debit || balance"
+    @transactions.each do |trans|
+      puts "Date: #{trans.date} || Type: #{trans.type} || Amount: #{trans.amount} ||"
+    end
   end
-
-  private
 
 end

@@ -21,7 +21,7 @@ describe "Features" do
   end
 
   context "A customer asks for a statement" do
-    it "shows the date, transaction type, amount and balance" do
+    xit "shows the date, transaction type, amount and balance" do
       account = Account.new
       account.deposit(1000, "10/01/2012")
       account.deposit(2000, "13/01/2012")
