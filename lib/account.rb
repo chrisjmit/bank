@@ -2,8 +2,7 @@ require "./lib/transaction"
 
 class Account
 
-  attr_reader :transactions
-  attr_accessor :balance
+  attr_reader :transactions, :balance
 
   def initialize
     @balance = 0
@@ -11,22 +10,27 @@ class Account
   end
 
   def deposit(amount, date)
-    credit = Transaction.new(amount, "credit", date)
-    @transactions << credit
+    @transactions << Transaction.new(amount, "credit", date)
     @balance += amount
   end
 
   def withdrawal(amount, date)
     raise "Insufficient funds" if @balance < amount
-    debit = Transaction.new(amount, "debit", date)
-    @transactions << debit
+    @transactions << Transaction.new(amount, "debit", date)
     @balance -= amount
   end
 
   def statement
+    print_header
     @transactions.each do |trans|
       puts "Date: #{trans.date} || Type: #{trans.type} || Amount: #{trans.amount} ||"
     end
+  end
+
+  private
+
+  def print_header
+    puts "date || credit || debit || balance"
   end
 
 end
