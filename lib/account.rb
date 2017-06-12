@@ -9,14 +9,14 @@ class Account
     @transactions = []
   end
 
-  def deposit(amount, date)
-    @transactions << Transaction.new(amount, "credit", date)
+  def deposit(amount)
+    @transactions << Transaction.new(amount, "credit")
     @balance += amount
   end
 
-  def withdrawal(amount, date)
+  def withdrawal(amount)
     raise "Insufficient funds" if @balance < amount
-    @transactions << Transaction.new(amount, "debit", date)
+    @transactions << Transaction.new(amount, "debit")
     @balance -= amount
   end
 
@@ -30,7 +30,7 @@ class Account
   private
 
   def print_header
-    puts "date || credit || debit || balance"
+    return "date || credit || debit || balance"
   end
 
 end

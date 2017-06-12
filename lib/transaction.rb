@@ -2,12 +2,12 @@ require 'date'
 
 class Transaction
 
-  attr_reader :amount, :type, :date
+  attr_reader :amount, :type
 
-  def initialize(amount, type, date)
+  def initialize(amount, type)
     @type = type
     @amount = amount
-    @date = date
+    @date = Date.new
   end
 
 end
