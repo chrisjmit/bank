@@ -40,5 +40,6 @@ I'd like to print these listed by latest date.
 
 ### Sequence diagram
 
+![alt text](Bank.png)
 
 https://www.draw.io/#G0B76mugBDdRAvcnpUUnllOGM5bVU
